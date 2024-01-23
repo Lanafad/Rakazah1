@@ -18,7 +18,6 @@
 		3FDD1A4F2B5FDED900A84671 /* RakazahApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RakazahApp.swift; sourceTree = "<group>"; };
 		3FDD1A512B5FDED900A84671 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3FDD1A532B5FDEDA00A84671 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3FDD1A552B5FDEDA00A84671 /* Rakazah.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rakazah.entitlements; sourceTree = "<group>"; };
 		3FDD1A572B5FDEDA00A84671 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,7 +54,6 @@
 				3FDD1A4F2B5FDED900A84671 /* RakazahApp.swift */,
 				3FDD1A512B5FDED900A84671 /* ContentView.swift */,
 				3FDD1A532B5FDEDA00A84671 /* Assets.xcassets */,
-				3FDD1A552B5FDEDA00A84671 /* Rakazah.entitlements */,
 				3FDD1A562B5FDEDA00A84671 /* Preview Content */,
 			);
 			path = Rakazah;
