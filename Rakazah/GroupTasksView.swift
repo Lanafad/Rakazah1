@@ -8,8 +8,25 @@
 import SwiftUI
 
 struct GroupTasksView: View {
+    
+    @State var isShowingTasksSheet = false
+    @ObservedObject var taskViewModel = TaskViewModel()
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("group tasks view")
+        
+        
+        Button(action: {isShowingTasksSheet.toggle()}, label: {
+            Text("Button")
+        })
+        .sheet(isPresented: $isShowingTasksSheet, content: {
+            TaskCreationView(TaskViewModel: taskViewModel)})
+        
+        ForEach(taskViewModel.tasks, id: \.self) { Task in
+            
+            TaskView(task: Task)
+            
+        }
     }
 }
 

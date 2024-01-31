@@ -5,14 +5,27 @@
 //  Created by lana alfaadhel on 27/01/2024.
 //
 
-import SwiftUI
+// the group functions (add and delete)
+import Foundation
 
-struct GroupViewModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+
+class GroupViewModel: ObservableObject{
+    
+    @Published var groups: [Group] = []
+    
+    
+    func addGroup(GroupName: String, GroupMembersCount: Int){
+        let newGroup = Group(GroupName: GroupName, GroupMembersCount: GroupMembersCount, tasks: [])
+        
+        groups.append(newGroup)
     }
-}
+    
+    
+    func deleteGroup(Group: Group){
+        if let index = groups.firstIndex(of: Group){
+            groups.remove(at: index)
+        }
+        
+    }
 
-#Preview {
-    GroupViewModel()
 }

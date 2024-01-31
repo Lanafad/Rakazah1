@@ -8,11 +8,34 @@
 import SwiftUI
 
 struct TaskCreationView: View {
+    
+    @State private var TaskName = ""
+    @State private var TaskReward = ""
+    @State private var DeadLine = Date.now
+    @ObservedObject var TaskViewModel: TaskViewModel
+
+    @Environment(\.dismiss) var dismiss
+
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+        
+        TextField("Task Name", text: $TaskName)
+            
+        TextField("Task Reward", text: $TaskReward)
+        
+        DatePicker(selection: $DeadLine, in: ...Date.now, displayedComponents: .date) {
+            Text("Select a deadline")
+        }
+        Button("Create Task") {
+            
+            TaskViewModel.addTask(TaskName: TaskName, TaskReward: TaskReward, DeadLine: DeadLine)
+            dismiss()
+
+        }    }
 }
 
-#Preview {
-    TaskCreationView()
-}
+
+//
+//#Preview {
+//    TaskCreationView()
+//}
