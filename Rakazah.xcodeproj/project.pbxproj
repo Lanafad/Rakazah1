@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D1802682B627E93006AEEC0 /* groupTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1802672B627E93006AEEC0 /* groupTasks.swift */; };
+		3D18026A2B67DD44006AEEC0 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1802692B67DD44006AEEC0 /* SwiftUIView.swift */; };
+		3D18026C2B6A7D44006AEEC0 /* PROFILE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D18026B2B6A7D44006AEEC0 /* PROFILE.swift */; };
 		3FDD1A502B5FDED900A84671 /* RakazahApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD1A4F2B5FDED900A84671 /* RakazahApp.swift */; };
 		3FDD1A522B5FDED900A84671 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD1A512B5FDED900A84671 /* ContentView.swift */; };
 		3FDD1A542B5FDEDA00A84671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FDD1A532B5FDEDA00A84671 /* Assets.xcassets */; };
@@ -14,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D1802672B627E93006AEEC0 /* groupTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = groupTasks.swift; sourceTree = "<group>"; };
+		3D1802692B67DD44006AEEC0 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		3D18026B2B6A7D44006AEEC0 /* PROFILE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PROFILE.swift; sourceTree = "<group>"; };
 		3FDD1A4C2B5FDED900A84671 /* Rakazah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rakazah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FDD1A4F2B5FDED900A84671 /* RakazahApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RakazahApp.swift; sourceTree = "<group>"; };
 		3FDD1A512B5FDED900A84671 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +59,9 @@
 			children = (
 				3FDD1A4F2B5FDED900A84671 /* RakazahApp.swift */,
 				3FDD1A512B5FDED900A84671 /* ContentView.swift */,
+				3D18026B2B6A7D44006AEEC0 /* PROFILE.swift */,
+				3D1802692B67DD44006AEEC0 /* SwiftUIView.swift */,
+				3D1802672B627E93006AEEC0 /* groupTasks.swift */,
 				3FDD1A532B5FDEDA00A84671 /* Assets.xcassets */,
 				3FDD1A562B5FDEDA00A84671 /* Preview Content */,
 			);
@@ -138,6 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FDD1A522B5FDED900A84671 /* ContentView.swift in Sources */,
+				3D1802682B627E93006AEEC0 /* groupTasks.swift in Sources */,
+				3D18026A2B67DD44006AEEC0 /* SwiftUIView.swift in Sources */,
+				3D18026C2B6A7D44006AEEC0 /* PROFILE.swift in Sources */,
 				3FDD1A502B5FDED900A84671 /* RakazahApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
