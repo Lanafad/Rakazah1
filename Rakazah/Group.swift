@@ -13,6 +13,4 @@ struct Group : Hashable{
     var GroupName : String
     var GroupMembersCount : Int
     var tasks : [Task]
-    
-
 }

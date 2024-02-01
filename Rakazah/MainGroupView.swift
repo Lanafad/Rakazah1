@@ -91,7 +91,7 @@ struct MainGroupsView: View {
                     Text("Home")
                 }
                 
-                ContentView()
+                Profile()
                     .tabItem {
                         Image(systemName: "person.crop.circle.fill")
                         Text("Profile")

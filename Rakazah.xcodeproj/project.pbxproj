@@ -17,6 +17,7 @@
 		3F59C9D32B6925CB002853DF /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59C9D22B6925CB002853DF /* TaskView.swift */; };
 		3F59C9D52B6A6215002853DF /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59C9D42B6A6215002853DF /* TaskViewModel.swift */; };
 		3F59C9D72B6A657F002853DF /* TaskCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59C9D62B6A657F002853DF /* TaskCreationView.swift */; };
+		3F59C9DB2B6C4AE1002853DF /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59C9DA2B6C4AE1002853DF /* Profile.swift */; };
 		3FDD1A502B5FDED900A84671 /* RakazahApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD1A4F2B5FDED900A84671 /* RakazahApp.swift */; };
 		3FDD1A522B5FDED900A84671 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD1A512B5FDED900A84671 /* ContentView.swift */; };
 		3FDD1A542B5FDEDA00A84671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FDD1A532B5FDEDA00A84671 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		3F59C9D22B6925CB002853DF /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		3F59C9D42B6A6215002853DF /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		3F59C9D62B6A657F002853DF /* TaskCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCreationView.swift; sourceTree = "<group>"; };
+		3F59C9DA2B6C4AE1002853DF /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		3FDD1A4C2B5FDED900A84671 /* Rakazah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rakazah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FDD1A4F2B5FDED900A84671 /* RakazahApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RakazahApp.swift; sourceTree = "<group>"; };
 		3FDD1A512B5FDED900A84671 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				3F59C9BD2B614A2A002853DF /* MainGroupView.swift */,
 				3F59C9C92B65143E002853DF /* GroupCreationView.swift */,
 				3F59C9D62B6A657F002853DF /* TaskCreationView.swift */,
+				3F59C9DA2B6C4AE1002853DF /* Profile.swift */,
 				3F59C9D02B69245D002853DF /* Task.swift */,
 				3F59C9D22B6925CB002853DF /* TaskView.swift */,
 				3F59C9D42B6A6215002853DF /* TaskViewModel.swift */,
@@ -170,6 +173,7 @@
 				3F59C9D52B6A6215002853DF /* TaskViewModel.swift in Sources */,
 				3FDD1A522B5FDED900A84671 /* ContentView.swift in Sources */,
 				3F59C9C62B65063A002853DF /* GroupViewModel.swift in Sources */,
+				3F59C9DB2B6C4AE1002853DF /* Profile.swift in Sources */,
 				3F59C9C82B650749002853DF /* GroupView.swift in Sources */,
 				3F59C9D32B6925CB002853DF /* TaskView.swift in Sources */,
 				3FDD1A502B5FDED900A84671 /* RakazahApp.swift in Sources */,
