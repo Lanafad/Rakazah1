@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33FDE8AD2B6C24E50018F32F /* profileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FDE8AC2B6C24E50018F32F /* profileView.swift */; };
+		33FDE8AF2B6D0B8E0018F32F /* memberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FDE8AE2B6D0B8E0018F32F /* memberView.swift */; };
 		3FDD1A502B5FDED900A84671 /* RakazahApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD1A4F2B5FDED900A84671 /* RakazahApp.swift */; };
 		3FDD1A522B5FDED900A84671 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD1A512B5FDED900A84671 /* ContentView.swift */; };
 		3FDD1A542B5FDEDA00A84671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FDD1A532B5FDEDA00A84671 /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33FDE8AC2B6C24E50018F32F /* profileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileView.swift; sourceTree = "<group>"; };
+		33FDE8AE2B6D0B8E0018F32F /* memberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memberView.swift; sourceTree = "<group>"; };
 		3FDD1A4C2B5FDED900A84671 /* Rakazah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rakazah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FDD1A4F2B5FDED900A84671 /* RakazahApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RakazahApp.swift; sourceTree = "<group>"; };
 		3FDD1A512B5FDED900A84671 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +57,8 @@
 			children = (
 				3FDD1A4F2B5FDED900A84671 /* RakazahApp.swift */,
 				3FDD1A512B5FDED900A84671 /* ContentView.swift */,
+				33FDE8AC2B6C24E50018F32F /* profileView.swift */,
+				33FDE8AE2B6D0B8E0018F32F /* memberView.swift */,
 				3FDD1A532B5FDEDA00A84671 /* Assets.xcassets */,
 				3FDD1A562B5FDEDA00A84671 /* Preview Content */,
 			);
@@ -139,6 +145,8 @@
 			files = (
 				3FDD1A522B5FDED900A84671 /* ContentView.swift in Sources */,
 				3FDD1A502B5FDED900A84671 /* RakazahApp.swift in Sources */,
+				33FDE8AF2B6D0B8E0018F32F /* memberView.swift in Sources */,
+				33FDE8AD2B6C24E50018F32F /* profileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
