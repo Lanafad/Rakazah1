@@ -11,6 +11,7 @@ import Foundation
 class TaskViewModel: ObservableObject{
     
     @Published var tasks: [Task] = []
+    @Published var finishedTasks: [Task] = []
 
     
     func addTask(TaskName: String, TaskReward: String, DeadLine: Date){
@@ -21,8 +22,11 @@ class TaskViewModel: ObservableObject{
     
 
     func TaskDone(Task: Task){
-        // do something to make the task go to the done pile
-        
+            
+        if let index = tasks.firstIndex(of: Task){
+            finishedTasks.append(Task)
+            tasks.remove(at: index)
+            }
     }
 
 }

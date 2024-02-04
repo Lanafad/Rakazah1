@@ -9,6 +9,8 @@ import SwiftUI
 
 struct TaskView: View {
     var task : Task
+    @ObservedObject var taskViewModel: TaskViewModel
+
     var body: some View {
         ZStack{
             
@@ -16,8 +18,8 @@ struct TaskView: View {
             RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
                 .fill(.rGreen)
                 .opacity(0.8)
-                .frame(width: 345, height: 169)
-            
+                .frame(width: 365, height: 146)
+
             
 
             VStack{
@@ -39,16 +41,23 @@ struct TaskView: View {
                             .multilineTextAlignment(.trailing)
                             .foregroundStyle(.white)
                         
-                        Text(task.TaskReward)
+                        Text("المكافأة : \(task.TaskReward)")
                             .font(.system(size: 13))
                             .multilineTextAlignment(.trailing)
                             .foregroundStyle(.white)
                         
                     }
                     .padding(.top, 10)
-                    Circle()
-                        .fill(.gray)
-                        .frame(width: 18)
+                    
+                    Button(action: {                        
+                        taskViewModel.TaskDone(Task: task)
+}, label: {
+                        
+    Circle()
+        .fill(.gray)
+        .frame(width: 18)
+                    })
+
                     
                     
                 }
@@ -59,10 +68,14 @@ struct TaskView: View {
                     .font(.system(size: 17))
                     .foregroundStyle(.white)
                     .frame(width: 325, height: 16, alignment: .bottomLeading)
+                    .padding(.bottom,
+                             20)
             }
         }
     }
 }
+
+
 //
 //#Preview {
 //    TaskView()

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct memberView: View {
+struct GroupTasksViewMember: View {
     @State private var isShowingSheet = false
     @State var textEditorText: String = ""
     @State var selection: Int = 0
@@ -61,5 +61,5 @@ struct memberView: View {
 
 
 #Preview {
-    memberView()
+    GroupTasksViewMember()
 }

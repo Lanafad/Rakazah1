@@ -12,12 +12,13 @@
 		3F59C9C62B65063A002853DF /* GroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59C9C52B65063A002853DF /* GroupViewModel.swift */; };
 		3F59C9C82B650749002853DF /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59C9C72B650749002853DF /* GroupView.swift */; };
 		3F59C9CA2B65143E002853DF /* GroupCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59C9C92B65143E002853DF /* GroupCreationView.swift */; };
-		3F59C9CC2B67BE6B002853DF /* GroupTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59C9CB2B67BE6B002853DF /* GroupTasksView.swift */; };
+		3F59C9CC2B67BE6B002853DF /* GroupTasksViewAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59C9CB2B67BE6B002853DF /* GroupTasksViewAdmin.swift */; };
 		3F59C9D12B69245D002853DF /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59C9D02B69245D002853DF /* Task.swift */; };
 		3F59C9D32B6925CB002853DF /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59C9D22B6925CB002853DF /* TaskView.swift */; };
 		3F59C9D52B6A6215002853DF /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59C9D42B6A6215002853DF /* TaskViewModel.swift */; };
 		3F59C9D72B6A657F002853DF /* TaskCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59C9D62B6A657F002853DF /* TaskCreationView.swift */; };
 		3F59C9DB2B6C4AE1002853DF /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59C9DA2B6C4AE1002853DF /* Profile.swift */; };
+		3F59C9DF2B6E5CF8002853DF /* GroupTasksViewMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59C9DE2B6E5CF8002853DF /* GroupTasksViewMember.swift */; };
 		3FDD1A502B5FDED900A84671 /* RakazahApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD1A4F2B5FDED900A84671 /* RakazahApp.swift */; };
 		3FDD1A522B5FDED900A84671 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDD1A512B5FDED900A84671 /* ContentView.swift */; };
 		3FDD1A542B5FDEDA00A84671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FDD1A532B5FDEDA00A84671 /* Assets.xcassets */; };
@@ -30,12 +31,13 @@
 		3F59C9C52B65063A002853DF /* GroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewModel.swift; sourceTree = "<group>"; };
 		3F59C9C72B650749002853DF /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
 		3F59C9C92B65143E002853DF /* GroupCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCreationView.swift; sourceTree = "<group>"; };
-		3F59C9CB2B67BE6B002853DF /* GroupTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTasksView.swift; sourceTree = "<group>"; };
+		3F59C9CB2B67BE6B002853DF /* GroupTasksViewAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTasksViewAdmin.swift; sourceTree = "<group>"; };
 		3F59C9D02B69245D002853DF /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		3F59C9D22B6925CB002853DF /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		3F59C9D42B6A6215002853DF /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		3F59C9D62B6A657F002853DF /* TaskCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCreationView.swift; sourceTree = "<group>"; };
 		3F59C9DA2B6C4AE1002853DF /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		3F59C9DE2B6E5CF8002853DF /* GroupTasksViewMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTasksViewMember.swift; sourceTree = "<group>"; };
 		3FDD1A4C2B5FDED900A84671 /* Rakazah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rakazah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FDD1A4F2B5FDED900A84671 /* RakazahApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RakazahApp.swift; sourceTree = "<group>"; };
 		3FDD1A512B5FDED900A84671 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,18 +76,19 @@
 			isa = PBXGroup;
 			children = (
 				3FDD1A4F2B5FDED900A84671 /* RakazahApp.swift */,
-				3F59C9CB2B67BE6B002853DF /* GroupTasksView.swift */,
 				3FDD1A512B5FDED900A84671 /* ContentView.swift */,
+				3F59C9DA2B6C4AE1002853DF /* Profile.swift */,
+				3F59C9BD2B614A2A002853DF /* MainGroupView.swift */,
 				3F59C9C32B6505D6002853DF /* Group.swift */,
 				3F59C9C72B650749002853DF /* GroupView.swift */,
 				3F59C9C52B65063A002853DF /* GroupViewModel.swift */,
-				3F59C9BD2B614A2A002853DF /* MainGroupView.swift */,
 				3F59C9C92B65143E002853DF /* GroupCreationView.swift */,
-				3F59C9D62B6A657F002853DF /* TaskCreationView.swift */,
-				3F59C9DA2B6C4AE1002853DF /* Profile.swift */,
 				3F59C9D02B69245D002853DF /* Task.swift */,
 				3F59C9D22B6925CB002853DF /* TaskView.swift */,
 				3F59C9D42B6A6215002853DF /* TaskViewModel.swift */,
+				3F59C9D62B6A657F002853DF /* TaskCreationView.swift */,
+				3F59C9CB2B67BE6B002853DF /* GroupTasksViewAdmin.swift */,
+				3F59C9DE2B6E5CF8002853DF /* GroupTasksViewMember.swift */,
 				3FDD1A532B5FDEDA00A84671 /* Assets.xcassets */,
 				3FDD1A562B5FDEDA00A84671 /* Preview Content */,
 			);
@@ -176,9 +179,10 @@
 				3F59C9DB2B6C4AE1002853DF /* Profile.swift in Sources */,
 				3F59C9C82B650749002853DF /* GroupView.swift in Sources */,
 				3F59C9D32B6925CB002853DF /* TaskView.swift in Sources */,
+				3F59C9DF2B6E5CF8002853DF /* GroupTasksViewMember.swift in Sources */,
 				3FDD1A502B5FDED900A84671 /* RakazahApp.swift in Sources */,
 				3F59C9C42B6505D6002853DF /* Group.swift in Sources */,
-				3F59C9CC2B67BE6B002853DF /* GroupTasksView.swift in Sources */,
+				3F59C9CC2B67BE6B002853DF /* GroupTasksViewAdmin.swift in Sources */,
 				3F59C9D72B6A657F002853DF /* TaskCreationView.swift in Sources */,
 				3F59C9BE2B614A2A002853DF /* MainGroupView.swift in Sources */,
 				3F59C9D12B69245D002853DF /* Task.swift in Sources */,
@@ -331,7 +335,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = lana.Rakazah;
+				PRODUCT_BUNDLE_IDENTIFIER = lana.RakazahApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -369,7 +373,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = lana.Rakazah;
+				PRODUCT_BUNDLE_IDENTIFIER = lana.RakazahApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";

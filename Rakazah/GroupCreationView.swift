@@ -14,6 +14,7 @@ struct GroupCreationView: View {
     @State private var GroupName = ""
     @State private var GroupMemebersCount = 0
     @State private var members = ""
+    @State private var IsLeader = false
     @ObservedObject var groupViewModel: GroupViewModel
     @Environment(\.presentationMode) var presentationMode
 
@@ -60,29 +61,48 @@ struct GroupCreationView: View {
                     .bold()
                 
                 TextField("@mail.com", text: $members)
-                    .foregroundColor(Color("rGreen"))
+//                    .foregroundColor(Color("rGreen"))
                     .background(.clear)
                     .frame(width: 400, height: 50)
                     .background(.gray.opacity(0.2))
                 
+            }          
+            
+            HStack(){
+                Toggle("", isOn: $IsLeader )
+
+                    Spacer()
+                
+                Text("هل انت قائد هذه المجموعة؟")
+                    .frame(width: 347, alignment: .trailing)
+                    .font(.headline)
+                    .bold()
+                
+                    
+                
             }
+            .frame(width: 380, height: 50, alignment: .center)
+            
+            
           
+            Button(action: {
+                                groupViewModel.addGroup(GroupName: GroupName, GroupMembersCount: GroupMemebersCount, Isleader: IsLeader)
+                                presentationMode.wrappedValue.dismiss()
+            }, label: {
+                Text("إنشاء")
+                    .frame(width: 327.0, height: 57.0)
+                    .background(Color("RBrown"))
+                    .foregroundColor(.white)
+                    .cornerRadius(100)
+                    .accessibilityLabel("Create")
+                    .padding(.top,300)
+                
+            })
                
          
-            
-            Button("إنشاء") {
-                groupViewModel.addGroup(GroupName: GroupName, GroupMembersCount: GroupMemebersCount)
-                presentationMode.wrappedValue.dismiss()
-                
-            }.frame(width: 327.0, height: 57.0)
-                .background(Color("RBrown"))
-                .foregroundColor(.white)
-                .cornerRadius(100)
-                .accessibilityLabel("Create")
-            
-                .padding(.top,300)
         } .multilineTextAlignment(.trailing)
 
     
     }
 }
+

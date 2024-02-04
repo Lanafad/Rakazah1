@@ -7,15 +7,15 @@
 
 // the group functions (add and delete)
 import Foundation
-
+import SwiftUI
 
 class GroupViewModel: ObservableObject{
     
     @Published var groups: [Group] = []
     
     
-    func addGroup(GroupName: String, GroupMembersCount: Int){
-        let newGroup = Group(GroupName: GroupName, GroupMembersCount: GroupMembersCount, tasks: [])
+    func addGroup(GroupName: String, GroupMembersCount: Int, Isleader: Bool){
+        let newGroup = Group(GroupName: GroupName, GroupMembersCount: GroupMembersCount, IsLeader: Isleader, tasks: [] )
         
         groups.append(newGroup)
     }
@@ -27,5 +27,7 @@ class GroupViewModel: ObservableObject{
         }
         
     }
+    
+
 
 }

@@ -7,7 +7,6 @@
 
 // the main group view
 
-
 import SwiftUI
 
 struct MainGroupsView: View {
@@ -17,6 +16,7 @@ struct MainGroupsView: View {
     @ObservedObject var groupViewModel = GroupViewModel()
     
     var body: some View {
+        
         NavigationView{
             
             TabView{
@@ -70,46 +70,63 @@ struct MainGroupsView: View {
                     // displays groups
                     ForEach(groupViewModel.groups, id: \.self) { group in
                         
-                        NavigationLink(destination: GroupTasksView(), label: {GroupView(group: group)
-                                .contextMenu {
-                                            // the grouptasksview should take a group variable that has the tasks array so it can display them
-                                    Button("Delete") {
-                                        groupViewModel.deleteGroup(Group: group)
+                        if (group.IsLeader){
+                            NavigationLink(destination: GroupTasksViewAdmin(), label: {GroupView(group: group)
+                                    .contextMenu {
+                                        // the grouptasksview should take a group variable that has the tasks array so it can display them
+                                        Button("Delete") {
+                                            groupViewModel.deleteGroup(Group: group)
+                                        }
                                     }
-                                }
-                            
-                        })
+                                
+                            })
 
+                        } else{
+                            NavigationLink(destination: GroupTasksViewMember(), label: {GroupView(group: group)
+                                    .contextMenu {
+                                        // the grouptasksview should take a group variable that has the tasks array so it can display them
+                                        Button("Delete") {
+                                            groupViewModel.deleteGroup(Group: group)
+                                        }
+                                    }
+                                
+                            })
+                        }
+                        
+                        
+                        
                         
                     }
-
+                    
                 }
                 .padding(.top, 40)
-                .background(.rBeige)
+                .background(.rBeige, ignoresSafeAreaEdges: .all)
                 .tabItem {
                     Image(systemName: "house.fill")
-                    Text("Home")
+                    Text("الرئيسية")
                 }
                 
                 Profile()
                     .tabItem {
                         Image(systemName: "person.crop.circle.fill")
-                        Text("Profile")
+                        Text("الحساب")
                         
                     }
             }
+
+
             
         }
         .accentColor(.rBrown)
         .onAppear() { UITabBar.appearance().backgroundColor = .white}
     }
+
     
  
     
 }
 
+
 #Preview {
     MainGroupsView()
 }
-
-

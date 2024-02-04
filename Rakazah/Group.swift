@@ -12,5 +12,6 @@ import SwiftUI
 struct Group : Hashable{
     var GroupName : String
     var GroupMembersCount : Int
+    var IsLeader : Bool
     var tasks : [Task]
 }
