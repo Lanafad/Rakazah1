@@ -12,10 +12,11 @@ class TaskViewModel: ObservableObject{
     
     @Published var tasks: [Task] = []
     @Published var finishedTasks: [Task] = []
+    @Published var isShowingSheet = false
 
     
-    func addTask(TaskName: String, TaskReward: String, DeadLine: Date){
-        let NewTask = Task(TaskName: TaskName, TaskReward: TaskReward, DeadLine: DeadLine)
+    func addTask(TaskName: String, TaskReward: String, DeadLine: Date, Members: [String]){
+        let NewTask = Task(TaskName: TaskName, TaskReward: TaskReward, DeadLine: DeadLine, Members: Members)
         
         tasks.append(NewTask)
     }
@@ -28,5 +29,16 @@ class TaskViewModel: ObservableObject{
             tasks.remove(at: index)
             }
     }
+    
+     func updateChoices(forTaskAtIndex index: Int, GroupMembersString : String) {
+         let GroupMembersArray = GroupMembersString.components(separatedBy: ",")
+         tasks[index].Members = GroupMembersArray
+         
+         
+    }
+         
+//         func updateChoices(Group : Group) {
+//        members = Group.GroupMembers.components(separatedBy: ",").map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+//    }
 
 }

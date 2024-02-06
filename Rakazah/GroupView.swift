@@ -26,6 +26,8 @@ struct GroupView: View {
                 
                 // displays the circles
                 HStack(spacing: -10) {
+                    
+                    
                     if (group.GroupMembersCount < 7){
                         ForEach(0..<group.GroupMembersCount, id :\.self){ index in
                             Circle()

@@ -12,6 +12,6 @@ struct Task : Hashable{
     var TaskName : String
     var TaskReward : String
     var DeadLine : Date
-//    var Assignee : String
-    // dk what that is yet
+    var Members : [String]
+
 }

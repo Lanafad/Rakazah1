@@ -12,8 +12,8 @@ import SwiftUI
 struct MainGroupsView: View {
     
     
-    @State private var isShowingGroupSheet = false
     @ObservedObject var groupViewModel = GroupViewModel()
+    @ObservedObject var taskViewModel = TaskViewModel()
     
     var body: some View {
         
@@ -26,9 +26,11 @@ struct MainGroupsView: View {
                     // text stack
                     VStack{
                         Text("حي الله  ،")
+                            .padding(.horizontal, 40)
+
                             .font(.system(size: 32))
                             .bold()
-                            .frame(width: 363, height: 20, alignment: .trailing)
+                            .frame(width: 440, height: 20, alignment: .trailing)
                             .padding(.bottom)
                         
                         Text("انضم الى مجموعتك أو كون مجموعتك الخاصة!")
@@ -39,7 +41,7 @@ struct MainGroupsView: View {
                     
                     
                     // create group button
-                    Button(action: {isShowingGroupSheet.toggle()}
+                    Button(action: {groupViewModel.isShowingGroupSheet = true}
                            , label: {
                         ZStack{
                             RoundedRectangle(cornerSize: CGSize(width: 29, height: 10))
@@ -64,7 +66,7 @@ struct MainGroupsView: View {
                     })
                     
                     // opens/closes sheet
-                    .sheet(isPresented: $isShowingGroupSheet, content: {
+                    .sheet(isPresented: $groupViewModel.isShowingGroupSheet, content: {
                         GroupCreationView(groupViewModel: groupViewModel)})
                     
                     // displays groups
@@ -73,7 +75,6 @@ struct MainGroupsView: View {
                         if (group.IsLeader){
                             NavigationLink(destination: GroupTasksViewAdmin(), label: {GroupView(group: group)
                                     .contextMenu {
-                                        // the grouptasksview should take a group variable that has the tasks array so it can display them
                                         Button("Delete") {
                                             groupViewModel.deleteGroup(Group: group)
                                         }
@@ -84,7 +85,6 @@ struct MainGroupsView: View {
                         } else{
                             NavigationLink(destination: GroupTasksViewMember(), label: {GroupView(group: group)
                                     .contextMenu {
-                                        // the grouptasksview should take a group variable that has the tasks array so it can display them
                                         Button("Delete") {
                                             groupViewModel.deleteGroup(Group: group)
                                         }

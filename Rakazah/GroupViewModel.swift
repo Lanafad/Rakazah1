@@ -5,19 +5,31 @@
 //  Created by lana alfaadhel on 27/01/2024.
 //
 
-// the group functions (add and delete)
+// the group functions
 import Foundation
 import SwiftUI
 
 class GroupViewModel: ObservableObject{
     
     @Published var groups: [Group] = []
+    @Published var isShowingGroupSheet = false
+
     
+    func addGroup( GroupName: String, GroupMembersCount : inout Int, Isleader: Bool, GroupMembers : String) -> Group{
+        
     
-    func addGroup(GroupName: String, GroupMembersCount: Int, Isleader: Bool){
-        let newGroup = Group(GroupName: GroupName, GroupMembersCount: GroupMembersCount, IsLeader: Isleader, tasks: [] )
+        var newGroup = Group(GroupName: GroupName, GroupMembersCount: GroupMembersCount, GroupMembers: GroupMembers, IsLeader: Isleader, tasks: [] )
+        
+        
+        let countA = newGroup.GroupMembers.filter { $0 == "،"}.count
+        let countB = newGroup.GroupMembers.filter { $0 == ","}.count
+        
+        newGroup.GroupMembersCount = countA + countB + 1
         
         groups.append(newGroup)
+
+        return newGroup
+        
     }
     
     
@@ -28,6 +40,7 @@ class GroupViewModel: ObservableObject{
         
     }
     
+
 
 
 }

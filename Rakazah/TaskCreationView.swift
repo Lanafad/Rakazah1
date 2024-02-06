@@ -11,10 +11,11 @@ struct TaskCreationView :View {
         @State private var TaskName = ""
         @State private var TaskReward = ""
         @State private var DeadLine = Date.now
-        @State private var selection = "Red"
-        let members = [""]
-        @Environment(\.dismiss) var dismiss
+        @State private var selection = 0
+        @State var members = [String]()
         @ObservedObject var TaskViewModel: TaskViewModel
+
+
     var body:some View{
         VStack {
             Text("إنشاء المهمة")
@@ -22,7 +23,6 @@ struct TaskCreationView :View {
                 .fontWeight(.semibold)
                 .padding(.leading, 250)
                 .padding(.top, 22)
-            // .padding(.bottom, 150)
             
             HStack {
                
@@ -33,22 +33,24 @@ struct TaskCreationView :View {
                     
                 
             }
-            
             TextField("مثال: تغسيل ملابس", text: $TaskName)
-               
-                .padding(.leading,250)
+                .frame(width: 400, height: 50, alignment: .trailing)
+
+                .multilineTextAlignment(.trailing)
           
             Text("المكافأة")
                 .font(.system(size: 22))
                 .padding(.top, 15)
                 .padding(.leading,300)
             
-            TextField(" مثال: عزيمة عشاء", text: $TaskReward)
-                .padding(.leading,250)
+            TextField(" مثال: عزيمة عشاء", text: $TaskReward)                    
+                .frame(width: 400, height: 50, alignment: .trailing)
+                .multilineTextAlignment(.trailing)
             
            
             
         }
+        
         VStack {
             HStack {
                
@@ -78,27 +80,33 @@ struct TaskCreationView :View {
                 .font(.system(size: 22))
                 .padding(.top, 15)
                 .padding(.leading,240)
-      
-            Picker("Select a member", selection: $selection) {
-                ForEach(members, id: \.self) {
-                    Text($0)
-                }
-            }
-            .pickerStyle(.menu)
-            .padding(.leading,-220)
-            .padding(.top, 17)
             
+           
+                
+                Picker("Select a member", selection: $selection) {
+                    
+                    ForEach(members.indices) { index in
+                        Text(members[index]).tag(index)
+                    }
+                }
+                .pickerStyle(.menu)
+                .padding(.leading,-220)
+                .padding(.top, 17)
+  
             
             
         }
+ 
         
         Spacer()
         Button(action: { 
-                                    TaskViewModel.addTask(TaskName: TaskName, TaskReward: TaskReward, DeadLine: DeadLine)
-                                    dismiss()
+            
+            TaskViewModel.addTask(TaskName: TaskName, TaskReward: TaskReward, DeadLine: DeadLine, Members: members)
+            TaskViewModel.isShowingSheet = false
+            
         }, label: {
             ZStack{
-                Text("إنشاء").foregroundStyle(Color.white)/*.padding(.trailing, 200)*/
+                Text("إنشاء").foregroundStyle(Color.white)
                     .font(.system(size: 24))
                 
             }
@@ -116,8 +124,13 @@ struct TaskCreationView :View {
         
         
     }
-}
     
+    
+
+}
+
+
+
     
 //
 //    

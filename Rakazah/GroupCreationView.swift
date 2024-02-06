@@ -13,10 +13,10 @@ struct GroupCreationView: View {
     
     @State private var GroupName = ""
     @State private var GroupMemebersCount = 0
-    @State private var members = ""
+    @State private var GroupMembers = ""
+    @State private var GroupMembersArray = [""]
     @State private var IsLeader = false
     @ObservedObject var groupViewModel: GroupViewModel
-    @Environment(\.presentationMode) var presentationMode
 
 
     var body: some View {
@@ -60,11 +60,13 @@ struct GroupCreationView: View {
                     .font(.headline)
                     .bold()
                 
-                TextField("@mail.com", text: $members)
-//                    .foregroundColor(Color("rGreen"))
+                TextField("ادخل اسماء الاعضاء و افصلها بفاصلة", text: $GroupMembers)
                     .background(.clear)
                     .frame(width: 400, height: 50)
                     .background(.gray.opacity(0.2))
+
+                
+
                 
             }          
             
@@ -86,8 +88,9 @@ struct GroupCreationView: View {
             
           
             Button(action: {
-                                groupViewModel.addGroup(GroupName: GroupName, GroupMembersCount: GroupMemebersCount, Isleader: IsLeader)
-                                presentationMode.wrappedValue.dismiss()
+                
+                 let newgroup = groupViewModel.addGroup(GroupName: GroupName, GroupMembersCount: &GroupMemebersCount, Isleader: IsLeader, GroupMembers: GroupMembers)
+                groupViewModel.isShowingGroupSheet = false
             }, label: {
                 Text("إنشاء")
                     .frame(width: 327.0, height: 57.0)

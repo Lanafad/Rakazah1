@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct GroupTasksViewAdmin: View {
-    @State private var isShowingSheet = false
     @ObservedObject var taskViewModel = TaskViewModel()
+    @ObservedObject var groupViewModel = GroupViewModel()
     @State var textEditorText: String = ""
     @State var selection: Int = 0
+    
     var body: some View {
-//            NavigationView {
+            NavigationView {
                 
                 
                 ZStack {
@@ -61,7 +62,7 @@ struct GroupTasksViewAdmin: View {
                             HStack{Spacer()}
                          
                             Button(action: {
-                                isShowingSheet = true
+                                taskViewModel.isShowingSheet = true
                             }) {
                                 Text("إضافة مهمة +")
                                     .font(.headline)
@@ -75,12 +76,12 @@ struct GroupTasksViewAdmin: View {
                                 
                             }
                         }
-                        .sheet(isPresented: $isShowingSheet) {
-                            TaskCreationView( TaskViewModel: taskViewModel)
+                        .sheet(isPresented: $taskViewModel.isShowingSheet) {
+                            TaskCreationView(TaskViewModel: taskViewModel)
+
                         }
                     }
-                    
-                        .navigationTitle("العـائلـة")
+                    .navigationTitle("العـائلـة")
                         .navigationBarBackButtonHidden(true)
             .toolbar{
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -89,9 +90,7 @@ struct GroupTasksViewAdmin: View {
                         VStack {
                             Image(systemName:"person.circle.fill")
                                 .foregroundColor(Color("RDark Brown"))
-    //                            .resizable()
-                           /* Circle()*/ //profile photo
-    //                            .frame(width:40, height: 40)
+ 
                             
                                 Text("مسؤول")
                                 .foregroundColor(Color("RBrown"))
@@ -102,7 +101,7 @@ struct GroupTasksViewAdmin: View {
                         }
                     }
                 }
-//            }
+            }
         }
     }
 
